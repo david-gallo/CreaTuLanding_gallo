@@ -1,11 +1,19 @@
-
+import React from "react";
 import ProductCard from "./ProductCard";
+import "../styles/Styles.scss";
 
-function ProductList({ products = [] }) {
+function ProductList({
+  products = [],         
+  onAddToCart             
+}) {
   return (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
+    <div className="product-list">
       {products.map(producto => (
-        <ProductCard key={producto.id} producto={producto} />
+        <ProductCard
+          key={producto.id}
+          producto={producto}
+          onAddToCart={onAddToCart}
+        />
       ))}
     </div>
   );

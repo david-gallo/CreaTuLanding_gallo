@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React from "react";
 import "../styles/cartWidget.scss";
 
-function CartWidget() {
-  const [count, setCount] = useState(0);
+function CartWidget({ count }) {
   return (
     <div className="cart-widget">
       <span>🛒</span>

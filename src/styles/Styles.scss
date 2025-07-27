@@ -1,0 +1,107 @@
+@import 'reset';
+@import 'variables';
+
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+button {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: var(--radius-base);
+  transition: background .2s;
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--primary-color);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--primary-hover);
+  }
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--primary-hover);
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-nav-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+
+  .navbar__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar__links {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}    
+.product-list__title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+.product-list__empty {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+
+
+@import 'CartWidget';
+@import 'productCard';
