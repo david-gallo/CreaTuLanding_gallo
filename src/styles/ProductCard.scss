@@ -1,6 +1,6 @@
 .product-card {
   display: flex;
-  flex-direction: column;     // default en móvil
+  flex-direction: column;
   background: var(--card-bg);
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--card-shadow);
@@ -50,11 +50,11 @@
   }
 }
 
-/* En desktop: imagen + contenido lado a lado */
+
 @media (min-width: 768px) {
   .product-card {
     flex-direction: row;
-    height: 200px;  // fija una altura cómoda
+    height: 200px; 
 
     img {
       width: 200px;

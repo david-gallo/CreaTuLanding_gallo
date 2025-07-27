@@ -1,0 +1,90 @@
+.footer {
+  background: var(--card-nav-bg);
+  color: #fff;
+  padding: 2rem 1rem 1rem;
+  margin-top: 4rem;
+  border-top-left-radius: var(--radius-base);
+  border-top-right-radius: var(--radius-base);
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .brand {
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent-color);
+      }
+
+      p {
+        font-size: 1rem;
+        color: #ccc;
+      }
+    }
+
+    .links {
+      h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 0.4rem 0;
+
+          a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--accent-color);
+            }
+          }
+        }
+      }
+    }
+
+    .social {
+      h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .icons {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          font-size: 1.5rem;
+          color: #fff;
+          transition: transform 0.2s;
+
+          &:hover {
+            transform: scale(1.2);
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+}

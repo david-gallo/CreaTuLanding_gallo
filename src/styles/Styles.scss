@@ -1,5 +1,7 @@
-@import 'reset';
-@import 'variables';
+@use 'reset';
+@use 'variables';
+@use 'CartWidget';
+@use 'productCard';
 
 
 #root {
@@ -103,5 +105,20 @@ a {
 
 
 
-@import 'CartWidget';
-@import 'productCard';
+
+.cart-widget {
+  position: relative;
+  font-size: 1.5rem;
+
+  .count {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.7rem;
+    background: var(--accent-color);
+    color: #212121;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+}
