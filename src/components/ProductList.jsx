@@ -3,8 +3,10 @@ import ProductCard from "./ProductCard";
 import "../styles/Styles.scss";
 
 function ProductList({
-  products = [],         
-  onAddToCart             
+  products = [],
+  onAddToCart,
+  onIncrement,
+  onDecrement
 }) {
   return (
     <div className="product-list">
@@ -13,6 +15,8 @@ function ProductList({
           key={producto.id}
           producto={producto}
           onAddToCart={onAddToCart}
+          onIncrement={onIncrement}
+          onDecrement={onDecrement}
         />
       ))}
     </div>

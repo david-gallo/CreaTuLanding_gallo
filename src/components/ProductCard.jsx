@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import "../styles/productCard.scss";
+import React from "react";
+import CartControls from "./cartcontrols";
 
-function ProductCard({ producto, onAddToCart }) {
-  const { modelo: nombre, tipo, precio, imagen, estado, dueños } = producto;
-  const [mostrarInfo, setMostrarInfo] = useState(false);
+function ProductCard({ producto, onIncrement, onDecrement }) {
+  const { modelo: nombre, tipo, precio, imagen } = producto;
 
   return (
     <div className="product-card">
@@ -13,15 +12,10 @@ function ProductCard({ producto, onAddToCart }) {
         <h3 className="product-card__title">{nombre}</h3>
         <p className="product-card__type">Tipo: {tipo}</p>
         <p className="product-card__price">Precio: ${precio}</p>
-        <p className="product-card__state">
-          Estado: {estado === "usado" ? "Usado" : "Nuevo"}
-        </p>
-        {estado === "usado" && (
-          <p className="product-card__owners">Dueños: {dueños}</p>
-        )}
-        <button className="product-card__btn" onClick={onAddToCart}>
-          Agregar al carrito
-        </button>
+
+        <section className="product-card__actions">
+          <CartControls onAdd={onIncrement} onRemove={onDecrement} />
+        </section>
       </div>
     </div>
   );

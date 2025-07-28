@@ -1,11 +1,11 @@
 @use 'reset';
+@use 'productCard';
 @use 'variables';
 @use 'CartWidget';
-@use 'productCard';
 
 
 #root {
-  max-width: 1200px;
+  max-width: 94rem;  
   margin: 0 auto;
   padding: 1rem;
 }

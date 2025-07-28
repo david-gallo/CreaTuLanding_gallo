@@ -6,14 +6,15 @@
   box-shadow: 0 2px 8px var(--card-shadow);
   overflow: hidden;
   transition: transform .2s, box-shadow .2s;
-
   img {
-    width: 100%;
     height: 180px;
-    object-fit: cover;
+  width: 100%;
+  object-fit: contain;
+ 
+  padding: 10px;
   }
 
-  .info {
+  .product-card__info {
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -28,14 +29,14 @@
       font-size: .95rem;
       color: #555;
     }
-    .price {
+    .product-card__price {
       margin-top: auto;
       font-size: 1.3rem;
       font-weight: bold;
     }
   }
 
-  .actions {
+  .product-card__actions{
     padding: 0 1rem 1rem;
     button {
       width: 100%;
@@ -51,24 +52,3 @@
 }
 
 
-@media (min-width: 768px) {
-  .product-card {
-    flex-direction: row;
-    height: 200px; 
-
-    img {
-      width: 200px;
-      height: 100%;
-    }
-
-    .info {
-      padding: 1rem;
-    }
-
-    .actions {
-      align-self: flex-end;
-      padding: 0 1rem 1rem;
-      width: 200px;
-    }
-  }
-}

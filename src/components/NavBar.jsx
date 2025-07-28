@@ -1,7 +1,8 @@
+import React from "react";
 import CartWidget from "./CartWidget";
 import "../styles/NavBar.scss";
 
-function NavBar() {
+function NavBar({ count }) {
   return (
     <nav className="navbar">
       <h1 className="logo">HardWare Zone</h1>
@@ -11,7 +12,7 @@ function NavBar() {
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
-      <CartWidget />
+      <CartWidget count={count} /> 
     </nav>
   );
 }

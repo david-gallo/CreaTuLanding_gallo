@@ -11,7 +11,7 @@ function Footer() {
           <h2>HardWare Zone</h2>
           <p>Componentes y tecnología de punta para tu PC</p>
         </div>
-
+        
         <div className="links">
           <h4>Secciones</h4>
           <ul>
